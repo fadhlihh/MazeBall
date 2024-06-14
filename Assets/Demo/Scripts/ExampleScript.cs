@@ -4,16 +4,43 @@ using UnityEngine;
 
 public class ExampleScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        // Memunculkan log hello world di console
-        Debug.Log("Hello World");
+        Debug.Log("Awake");
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
+        Debug.Log("On Enable");
+    }
 
+    private void Start()
+    {
+        Debug.Log("Start");
+    }
+
+    private void Update()
+    {
+        Debug.Log("Update");
+    }
+
+    private void LateUpdate()
+    {
+        Debug.Log("Late Update");
+    }
+
+    private void OnDisable()
+    {
+        Debug.Log("On Disable");
+    }
+
+    private void OnDestroy()
+    {
+        Debug.Log("On Destroy");
+    }
+
+    private void OnApplicationQuit()
+    {
+        Debug.Log("On Application Quit");
     }
 }
