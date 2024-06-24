@@ -13,6 +13,22 @@ public class MazeMovement : MonoBehaviour
 
     private void Update()
     {
-        _mazeTransform.Rotate(0, 0, -1);
+        // bool isHoldRightInput = Input.GetKey(KeyCode.D);
+        // if (isHoldRightInput)
+        // {
+        //     // Rotate Clockwise
+        //     _mazeTransform.Rotate(0, 0, -1);
+        // }
+        // bool isHoldLeftInput = Input.GetKey(KeyCode.A);
+        // if (isHoldLeftInput)
+        // {
+        //     // Rotate Anti-Clockwise
+        //     _mazeTransform.Rotate(0, 0, 1);
+        // }
+
+        float horizontalInput = Input.GetAxis("Horizontal");
+        // Memutar dengan arah sesuai horizontal input
+        _mazeTransform.Rotate(0, 0, -horizontalInput);
+
     }
 }
