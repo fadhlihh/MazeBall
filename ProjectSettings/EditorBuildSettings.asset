@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/MazeGame/Scenes/Gameplay.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/MazeBall/Scenes/Gameplay.unity
+    guid: 7092fc39f8afff94e9344600502556bf
+  - enabled: 1
+    path: Assets/MazeBall/Scenes/GameOver.unity
+    guid: 6eb8a430979307946a88fb68f01360ba
   m_configObjects: {}

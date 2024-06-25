@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Goal : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class Goal : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ball"))
         {
-            Debug.Log("You Win!");
+            SceneManager.LoadScene("GameOver");
         }
     }
 }
