@@ -10,8 +10,8 @@ public class GameOverUIManager : MonoBehaviour
         SceneManager.LoadScene("Gameplay");
     }
 
-    public void Quit()
+    public void BackToMainMenu()
     {
-        Application.Quit();
+        SceneManager.LoadScene("MainMenu");
     }
 }

@@ -5,30 +5,31 @@ using UnityEngine;
 public class MazeMovement : MonoBehaviour
 {
     private Transform _mazeTransform;
+    private float direction = 0;
+    private float speed = 20;
 
     private void Awake()
     {
         _mazeTransform = GetComponent<Transform>();
     }
 
+    public void RotateRight()
+    {
+        direction = -1;
+    }
+
+    public void RotateLeft()
+    {
+        direction = 1;
+    }
+
+    public void ResetRotation()
+    {
+        direction = 0;
+    }
+
     private void Update()
     {
-        // bool isHoldRightInput = Input.GetKey(KeyCode.D);
-        // if (isHoldRightInput)
-        // {
-        //     // Rotate Clockwise
-        //     _mazeTransform.Rotate(0, 0, -1);
-        // }
-        // bool isHoldLeftInput = Input.GetKey(KeyCode.A);
-        // if (isHoldLeftInput)
-        // {
-        //     // Rotate Anti-Clockwise
-        //     _mazeTransform.Rotate(0, 0, 1);
-        // }
-
-        float horizontalInput = Input.GetAxis("Horizontal");
-        // Memutar dengan arah sesuai horizontal input
-        _mazeTransform.Rotate(0, 0, -horizontalInput);
-
+        _mazeTransform.Rotate(0, 0, direction * speed * Time.deltaTime);
     }
 }
